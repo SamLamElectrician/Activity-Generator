@@ -18,24 +18,38 @@
 // }
 const boredApp = {}
 boredApp.url = "http://www.boredapi.com/api/activity"
+
 boredApp.generateButton = document.getElementById("generate")
 boredApp.randomButton = document.getElementById("random")
+boredApp.displayActivityDiv = document.getElementById("displayActivity")
 
-boredApp.randomButton.addEventListener("click",)
 
+boredApp.randomButton.addEventListener("submit", () =>{
+    boredApp.random()
+})
+//gets data for random activity/button
 boredApp.random = () => {
     fetch("http://www.boredapi.com/api/activity")
         .then((res) => {
             return res.json();
         })
         .then((jsonResponse) => {
-            console.log(jsonResponse)
+            const activity = jsonResponse.activity
+            boredApp.display(activity)
+            
         })
 }
 
+boredApp.display = (activity) =>{
+   const p = document.createElement('p')
+   p.innerHTML = `${activity} together <3 <3 <3`
+   boredApp.displayActivityDiv.appendChild(p)
+}
+
+//random 
 
 
-
+//search generator for generate button
 boredApp.getUserData = () => {
     const numOfPpl = 2;
     const activity = "recreational";
@@ -63,8 +77,11 @@ boredApp.getUserData = () => {
 }
 
 boredApp.init = () => {
-    boredApp.getUserData();
+    boredApp.random()
+    boredApp.display()
   }
+
+  //do we need init for event listeners??
 
 boredApp.init()
 
