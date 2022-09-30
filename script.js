@@ -8,16 +8,18 @@ boredApp.randomButton = document.getElementById("random")
 boredApp.displayActivityDiv = document.getElementById("displayActivity")
 
 //event listener for buttons
-//both lead to display() to display results
+//both lead to display() to display
 boredApp.generateButton.addEventListener('click', (e) =>{
     e.preventDefault()
     boredApp.getUserData()
     
 })
+
 boredApp.randomButton.addEventListener("click", (e) =>{
     e.preventDefault()
     boredApp.random()
 })
+
 //gets data for random activity/button
 boredApp.random = () => {
     fetch("http://www.boredapi.com/api/activity")
@@ -26,6 +28,7 @@ boredApp.random = () => {
         })
         .then((jsonResponse) => {
             const activity = jsonResponse.activity
+            console.log(jsonResponse)
             boredApp.display(activity)
             
         })
@@ -36,6 +39,13 @@ boredApp.display = (activity) =>{
    const p = document.getElementById('activityP')
    p.innerHTML = `&#128150; &#128150; &#128150; ${activity} together  &#128150; &#128150; &#128150;`
 }
+
+//error code for unmatched params
+boredApp.tryAgain = (activity) =>{
+    const p = document.getElementById('activityP')
+    p.innerHTML = ` &#128150; &#128150; &#128150; Try again &#128150; &#128150; &#128150;`
+ }
+ 
 
 //search generator for generate button
 boredApp.getUserData = () => {
@@ -50,13 +60,20 @@ boredApp.getUserData = () => {
     })
 
     //uses search params to create endpoint to fetch data
+    console.log(url)
     fetch(url)
         .then((res) => {
             return res.json();
         })
         .then((jsonResponse) => {
             const genActivity = jsonResponse.activity
-            boredApp.display(genActivity)
+            //if statement incase you get an undefined activity aka params dont match
+            if (genActivity === undefined){
+                boredApp.tryAgain()
+            }else {
+                 boredApp.display(genActivity)
+            }
+           
         })
 }
 
