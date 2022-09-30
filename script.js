@@ -16,37 +16,40 @@
 // 	"participants":1,
 // 	"price":0
 // }
-app = {}
-app.url = "http://www.boredapi.com/api/"
+const boredApp = {}
+boredApp.url = "http://www.boredapi.com/api/"
 
-app.GetUserData = () => {
-
-    const url = new URL(app.url)
-    url.search = new URLSearchParams({
-        //key:value pairs for accessibiblity
-    })
-
+boredApp.GetUserData = () => {
+    
+    // const url = new URL(app.url)
+    // url.search = new URLSearchParams({
+    // })
     fetch("http://www.boredapi.com/api/")
         .then((res) => {
             return res.json();
         })
         .then((jsonResponse) => {
-
+            console.log(jsonResponse)
         })
 }
 
+boredApp.init = () => {
+    boredApp.GetUserData();
+  }
 
-weatherApp = {}
+boredApp.init()
 
-weatherApp.url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apikey}`
-weatherApp.apikey = "dbc0821b5bd7f5f1698ab2fdcd1e5893";
+// weatherApp = {}
 
-weatherApp.getLocation = () => {
-    const url = new Url(weatherApp.url)
-    const url.search = new Search URLSearchParams({
-        q
-    })
-}
+// weatherApp.url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apikey}`
+// weatherApp.apikey = "dbc0821b5bd7f5f1698ab2fdcd1e5893";
+
+// weatherApp.getLocation = () => {
+//     const url = new Url(weatherApp.url)
+//     const url.search = new Search URLSearchParams({
+//         q
+//     })
+// }
 
 
 
