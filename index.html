@@ -28,7 +28,7 @@
         <form>
           <!-- "How many people" dropdown menu -->
           <div class="tophalf">
-            <!-- <div class="partyPpl">
+            <div class="partyPpl">
               <label for="numOfPpl">How many in your party</label>
               <select name="people" id="people">
                 <option>2</option>
@@ -36,7 +36,7 @@
                 <option>4</option>
                 <option>5+</option>
               </select>
-            </div> -->
+            </div>
             
              <div class="activity">
               <label for="activitytype">What type of activity</label>
@@ -59,12 +59,12 @@
           <!-- Price Range dropdown for selection -->
           <div class="dolladollabills">
             <p>Price (0 being free and 100% being as expensive as can be):</p>
-            <input type="range" min="1" max="10" step="any" list="tickmarks"/>
+            <input type="range" min="0" max="1" step="0.1" list="tickmarks"/>
           </div>
           <!-- 2nd button to suggest activity based on user inputs -->
           <div class="buttonField">
-            <button type="button">Generate</button>
-            <button type="Button">Randomize</button>
+            <button type="button" id="Generate">Generate</button>
+            <button type="button" id="random">Randomize</button>
           </div>
         </form>
       </section>

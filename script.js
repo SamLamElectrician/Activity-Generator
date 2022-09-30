@@ -17,14 +17,43 @@
 // 	"price":0
 // }
 const boredApp = {}
-boredApp.url = "http://www.boredapi.com/api/"
+boredApp.url = "http://www.boredapi.com/api/activity"
+boredApp.generateButton = document.getElementById("generate")
+boredApp.randomButton = document.getElementById("random")
 
-boredApp.GetUserData = () => {
-    
-    // const url = new URL(app.url)
-    // url.search = new URLSearchParams({
-    // })
-    fetch("http://www.boredapi.com/api/")
+boredApp.randomButton.addEventListener("click",)
+
+boredApp.random = () => {
+    fetch("http://www.boredapi.com/api/activity")
+        .then((res) => {
+            return res.json();
+        })
+        .then((jsonResponse) => {
+            console.log(jsonResponse)
+        })
+}
+
+
+
+
+boredApp.getUserData = () => {
+    const numOfPpl = 2;
+    const activity = "recreational";
+    const maxPrice = 0.1;
+    const maxaccess = 1;
+
+    const url = new URL(boredApp.url)
+    url.search = new URLSearchParams({
+        "participants": numOfPpl,
+        "type": activity, //type refers to style of activity 
+        "minprice": 0,
+        "maxprice": maxPrice,
+        "minaccessibility":0,
+        "maxaccessibility": maxaccess,
+    })
+
+    console.log(url)
+    fetch("http://www.boredapi.com/api/activity")
         .then((res) => {
             return res.json();
         })
@@ -34,10 +63,17 @@ boredApp.GetUserData = () => {
 }
 
 boredApp.init = () => {
-    boredApp.GetUserData();
+    boredApp.getUserData();
   }
 
 boredApp.init()
+
+
+
+
+
+
+
 
 // weatherApp = {}
 
@@ -51,21 +87,10 @@ boredApp.init()
 //     })
 // }
 
-
-
-
-
-
-
 //STRETCH GOAL API
 // DISPLAY WEATHER IN TORONTO
 // DISPLAY WEATHER INFORMATION FOR THE CURRENT DAY (MAYBE THE USER WOULD LIKE TO RETHINK THEIR DATE IF IT'S RAINING)
 // MORE STRETCH: DISPLAY WEATHER TOP OF THE FORM FOR THE WEEK SO THE USER CAN PLAN THERE FUTURE DATE
-
-
-
-
-
 
 // HOW SEARCH PARAMS ARE SETUP
 //http://www.boredapi.com/documentation
