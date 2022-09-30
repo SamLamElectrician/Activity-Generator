@@ -1,29 +1,19 @@
 
-
-
-// RETRIEVEDATA FROM DROPDOWN MENUS(PRICE,ACTIVITY TYPE, #OF PEOPLE) FOR SUBMISSION TO BORED API
-// USING DATA RETRIVED FROM MENUS, STORE IN VARIABLES TO USE AS SEARCH PARAMETERS
-// IF USER CLICKS RANDOMIZE BUTTON SUGGEST COMPLETELY RANDOM ACTIVITY FROM BORED API
-//
-// FETCH DATA FROM BORED API TO SUGGEST DATE BASED ON USERS INPUT
-// DISPLAY DATA IN A PARAGRAPH ELEMENT IN THE MAIN SECTION
-// INITIZALE BOREDAPI APP
-//HOW BORED API DATA IS PRESENTED
-// {
-// 	"activity":"Learn a new recipe",
-// 	"accessibility":0.05,
-// 	"type":"cooking",
-// 	"participants":1,
-// 	"price":0
-// }
 const boredApp = {}
+//url endpoint for random and start point for search params
 boredApp.url = "http://www.boredapi.com/api/activity"
 
 boredApp.generateButton = document.getElementById("generate")
 boredApp.randomButton = document.getElementById("random")
 boredApp.displayActivityDiv = document.getElementById("displayActivity")
 
-
+//event listener for buttons
+//both lead to display() to display results
+boredApp.generateButton.addEventListener('click', (e) =>{
+    e.preventDefault()
+    boredApp.getUserData()
+    
+})
 boredApp.randomButton.addEventListener("click", (e) =>{
     e.preventDefault()
     boredApp.random()
@@ -41,46 +31,37 @@ boredApp.random = () => {
         })
 }
 
+//drycode to present items
 boredApp.display = (activity) =>{
-   let p = document.getElementById('activityP')
+   const p = document.getElementById('activityP')
    p.innerHTML = `&#128150; &#128150; &#128150; ${activity} together  &#128150; &#128150; &#128150;`
-   boredApp.displayActivityDiv.appendChild(p)
 }
-
-//random 
-
 
 //search generator for generate button
 boredApp.getUserData = () => {
-    const numOfPpl = 3;
-    const activity = "recreational";
-    const maxPrice = 0.1;
-    const maxaccess = 1;
-
-    const url = new URL(boredApp.url)
+   const activityVal= document.getElementById('people').value
+   const maxPrice = document.getElementById("price").value
+   const url = new URL(boredApp.url)
+   //defines search params
     url.search = new URLSearchParams({
-        "participants": numOfPpl,
-        "type": activity, //type refers to style of activity 
+        "type": activityVal, //type refers to style of activity 
         "minprice": 0,
         "maxprice": maxPrice,
-        "minaccessibility":0,
-        "maxaccessibility": maxaccess,
     })
 
-    console.log(url)
-    fetch("http://www.boredapi.com/api/activity")
+    //uses search params to create endpoint to fetch data
+    fetch(url)
         .then((res) => {
             return res.json();
         })
         .then((jsonResponse) => {
-            console.log(jsonResponse)
+            const genActivity = jsonResponse.activity
+            boredApp.display(genActivity)
         })
 }
 
 boredApp.init = () => {
-    boredApp.random()
-  }
-
+}
   //do we need init for event listeners??
 
 boredApp.init()

@@ -32,16 +32,16 @@
              <div class="activity">
               <label for="activitytype">What type of activity</label>
               <select name="people" id="people">
-                <option>No Preference</option>
-                <option>Education</option>
-                <option>Recreational</option>
-                <option>Social</option>
-                <option>DIY</option>
-                <option>Charity</option>
-                <option>Cooking</option>
-                <option>Relaxation</option>
-                <option>Music</option>
-                <option>Busy Work</option>
+                <option value="">No Preference</option>
+                <option value="Education">Education</option>
+                <option value="Recreational">Recreational</option>
+                <option value="Social">Social</option>
+                <option value="DIY">DIY</option>
+                <option value="Charity">Charity</option>
+                <option value="Cooking">Cooking</option>
+                <option value="Relaxation">Relaxation</option>
+                <option value="Music">Music</option>
+                <option value="vBusy Work">Busy Work</option>
               </select>
             </div>
           </div>
@@ -50,7 +50,7 @@
           <!-- Price Range dropdown for selection -->
           <div class="dolladollabills">
             <p>Price (0 being free and 100% being as expensive as can be):</p>
-            <input type="range" min="0" max="1" step="0.1" list="tickmarks"/>
+            <input type="range" min="0" max="1" step="0.1" list="tickmarks" id="price"/>
           </div>
           <!-- 2nd button to suggest activity based on user inputs -->
           <div class="buttonField">
@@ -61,7 +61,9 @@
       </section>
       <section>
         <div class="activityDisplay" id="displayActivity">
+          <p id="heart"></p>
           <p id="activityP"></p>
+          <p id="heart"></p>
         </div>
       </section>
     </main>
