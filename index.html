@@ -1,41 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Project 2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="headerTitle">Sam and Phil's Date Generator </h1>
-        <nav>
-            <ul>
-                <!-- Randomize Button To generate randomize all parameteres date activity -->
-                <li>Randomize</li>
-            </ul>
-        </nav>
+      <h1 class="headerTitle">Sam and Phil's Date Generator</h1>
     </header>
     <main>
-        <section class="weather">
-            <!-- Whats the weather like today! -->
-            <!-- STRETCH GOALS Displays weather information for current location  -->
-        </section>
+      <section class="weather">
+        <div class="Weather box">
+          <div class="imageBox"></div>
+          <p></p>
+        </div>
+        <!-- Whats the weather like today! -->
+        <!-- STRETCH GOALS Displays weather information for current location  -->
+      </section>
 
-        <section class="selectors">
-            <form>
-                <!-- "How many people" dropdown menu -->
-                <!-- Price Range dropdown for selection -->
-                <!-- Category dropdown menu for selection -->
-                <!-- 2nd button to suggest activity based on user inputs -->
-            </form>
-        </section>
+      <section class="selectors">
+        <form>
+          <!-- "How many people" dropdown menu -->
+          <div class="partyPpl">
+            <label for="numOfPpl">How many in your party</label>
+            <select name="people" id="people">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+          <!-- Price Range dropdown for selection -->
+          <div class="dolladollabills">
+            <p>Price (0 being free and 100% being as expensive as can be):</p>
+            <input type="range" min="1" max="10" step="any" list="tickmarks"/>
+          </div>
+
+
+
+        <div>
+            <div class="range">
+                <input type="range" min="1" max="7" steps="1" value="1">
+              </div>
+              
+              <ul class="range-labels">
+                <li class="active selected">Today</li>
+                <li>2 days</li>
+                <li>3 days</li>
+                <li>4 days</li>
+                <li>5 days</li>
+                <li>6 days</li>
+                <li>7 days</li>
+              </ul>
+        </div>
+        <!-- css https://codepen.io/trevanhetzel/pen/rOVrGK -->
+
+
+          <!-- Category dropdown menu for selection -->
+          <div class="activity">
+            <label for="activitytype">What type of activity</label>
+            <select name="people" id="people">
+              <option>No Preference</option>
+              <option>Education</option>
+              <option>Recreational</option>
+              <option>Social</option>
+              <option>DIY</option>
+              <option>Charity</option>
+              <option>Cooking</option>
+              <option>Relaxation</option>
+              <option>Music</option>
+              <option>Busy Work</option>
+            </select>
+          </div>
+          <!-- 2nd button to suggest activity based on user inputs -->
+          <div class="buttonField">
+            <button type="button">Generate</button>
+            <button type="Button">Randomize</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
