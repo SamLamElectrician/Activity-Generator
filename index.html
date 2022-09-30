@@ -28,15 +28,6 @@
         <form>
           <!-- "How many people" dropdown menu -->
           <div class="tophalf">
-            <div class="partyPpl">
-              <label for="numOfPpl">How many in your party</label>
-              <select name="people" id="people">
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-              </select>
-            </div>
             
              <div class="activity">
               <label for="activitytype">What type of activity</label>
@@ -64,12 +55,14 @@
           <!-- 2nd button to suggest activity based on user inputs -->
           <div class="buttonField">
             <button type="button" id="generate">Generate</button>
-            <button id="random">Randomize</button>
+            <button type="button" id="random">Randomize</button>
           </div>
         </form>
       </section>
       <section>
-        <div class="activityDisplay" id="displayActivity"></div>
+        <div class="activityDisplay" id="displayActivity">
+          <p id="activityP"></p>
+        </div>
       </section>
     </main>
     <script src="script.js"></script>

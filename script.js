@@ -24,7 +24,8 @@ boredApp.randomButton = document.getElementById("random")
 boredApp.displayActivityDiv = document.getElementById("displayActivity")
 
 
-boredApp.randomButton.addEventListener("submit", () =>{
+boredApp.randomButton.addEventListener("click", (e) =>{
+    e.preventDefault()
     boredApp.random()
 })
 //gets data for random activity/button
@@ -41,8 +42,8 @@ boredApp.random = () => {
 }
 
 boredApp.display = (activity) =>{
-   const p = document.createElement('p')
-   p.innerHTML = `${activity} together <3 <3 <3`
+   let p = document.getElementById('activityP')
+   p.innerHTML = `&#128150; &#128150; &#128150; ${activity} together  &#128150; &#128150; &#128150;`
    boredApp.displayActivityDiv.appendChild(p)
 }
 
@@ -51,7 +52,7 @@ boredApp.display = (activity) =>{
 
 //search generator for generate button
 boredApp.getUserData = () => {
-    const numOfPpl = 2;
+    const numOfPpl = 3;
     const activity = "recreational";
     const maxPrice = 0.1;
     const maxaccess = 1;
@@ -78,14 +79,16 @@ boredApp.getUserData = () => {
 
 boredApp.init = () => {
     boredApp.random()
-    boredApp.display()
   }
 
   //do we need init for event listeners??
 
 boredApp.init()
 
-
+//button random completed
+//add generate params
+//add stylings
+//add weather last 
 
 
 

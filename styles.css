@@ -36,3 +36,7 @@ form{
     gap: 4%;
 }
 
+.activityDisplay{
+    text-align: center;
+    font-size: 3rem;
+}
