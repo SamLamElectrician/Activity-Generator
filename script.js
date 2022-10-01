@@ -108,11 +108,13 @@ fetch(url)
         return res.json();
     })
     .then((jsonResponse) => {
+        console.log(jsonResponse.weather[0].icon)
         const weatherData = {
             mainTemp: (jsonResponse.main.temp),
             feelsLike: (jsonResponse.main.feels_like),
             windSpeed: (jsonResponse.wind.speed),
-            cloudData: (jsonResponse.weather[0].main)
+            cloudData: (jsonResponse.weather[0].main),
+            icon: (jsonResponse.weather[0].icon)
         }
         weatherApp.displayWeather(weatherData)
 
@@ -120,11 +122,18 @@ fetch(url)
 
 
 weatherApp.displayWeather = (weather) => {
-    const p = document.createElement('p');
+    const h2 = document.createElement('h2');
     const weatherDisplay = document.querySelector('.weatherDisplay');
-    p.innerText = (`${Math.round(weather.mainTemp)}`)
-
-    weatherDisplay.appendChild(p);
+    h2.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
+    const img = document.createElement('img')
+    img.src = (`http://openweathermap.org/img/wn/${weather.icon}.png`)
+    img.classList.add("icon")
+    const h3 = document.createElement('h3')
+    h3.innerText = (`${weather.cloudData}`)
+    
+    weatherDisplay.appendChild(img)
+    weatherDisplay.appendChild(h2);
+    weatherDisplay.appendChild(h3);
 }
 
 
