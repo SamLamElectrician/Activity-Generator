@@ -121,10 +121,10 @@ fetch(url)
 
 weatherApp.displayWeather = (weather) => {
     const p = document.createElement('p');
-    const weatherDisplay = document.querySelector('.weatherDisaply');
-    p.innerText(`${weather.mainTemp}`)
+    const weatherDisplay = document.querySelector('.weatherDisplay');
+    p.innerText = (`${Math.round(weather.mainTemp)}`)
 
-    weatherDisplay.appendChild(p.innerText(`${Math.round(weather.mainTemp)}`));
+    weatherDisplay.appendChild(p);
 }
 
 
