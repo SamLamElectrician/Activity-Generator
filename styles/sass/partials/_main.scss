@@ -1,0 +1,26 @@
+body{
+    background: radial-gradient(circle, rgba(70,190,252,1) 4%, rgba(63,136,251,1) 72%);
+}
+.weather{
+    text-align: center;
+}
+.weatherBox{
+    padding:4% 2% 4% 2%;
+    margin: 0 auto;
+}
+
+form{
+    text-align: center;
+}
+
+.tophalf{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    gap: 4%;
+}
+
+.activityDisplay{
+    text-align: center;
+    font-size: 3rem;
+}
