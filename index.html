@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Project 2</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Project 2</title>
+</head>
 <!-- TESTING PHIL -->
-  <body>
-    <header>
-      <h1 class="headerTitle">Sam and Phil's Date Generator</h1>
-    </header>
-    <main>
-      <section class="weather">
-          <div class="weatherBox">
-            <input type="text" id="city" name="city" placeholder="City">
-          </div>
-          <ul>
 
-          </ul>
+<body>
+  <header>
+    <h1 class="headerTitle">Sam and Phil's Date Generator</h1>
+  </header>
+  <main>
+    <section class="weather">
+      <div class="weatherBox">
+        <input type="text" id="city" name="city" placeholder="City">
+      </div>
+      <ul>
 
-        <!-- Whats the weather like today! -->
-        <!-- STRETCH GOALS Displays weather information for current location  -->
-      </section>
-      <section class="selectors">
-        <form>
-          <!-- "How many people" dropdown menu -->
-          <div class="tophalf">
-            
-            <div class="activity">
-              <label for="activitytype">What type of activity</label>
-              <select name="people" id="people">
-                <option value="">No Preference</option>
-                <option value="education">Education</option>
-                <option value="recreational">Recreational</option>
-                <option value="social">Social</option>
-                <option value="diy">DIY</option>
-                <option value="charity">Charity</option>
-                <option value="cooking">Cooking</option>
-                <option value="relaxation">Relaxation</option>
-                <option value="music">Music</option>
-                <option value="busy Work">Busy Work</option>
-              </select>
-            </div>
+      </ul>
+
+      <!-- Whats the weather like today! -->
+      <!-- STRETCH GOALS Displays weather information for current location  -->
+    </section>
+    <section class="selectors">
+      <form>
+        <!-- "How many people" dropdown menu -->
+        <div class="tophalf">
+
+          <div class="activity">
+            <label for="activitytype">What type of activity</label>
+            <select name="people" id="people">
+              <option value="">No Preference</option>
+              <option value="education">Education</option>
+              <option value="recreational">Recreational</option>
+              <option value="social">Social</option>
+              <option value="diy">DIY</option>
+              <option value="charity">Charity</option>
+              <option value="cooking">Cooking</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="music">Music</option>
+              <option value="busy Work">Busy Work</option>
+            </select>
           </div>
-          
-          
-          <!-- Price Range dropdown for selection -->
-          <div class="dolladollabills">
-            <p>Price (0 being free and 100% being as expensive as can be):</p>
-            <input type="range" min="0" max="1" step="0.1" list="tickmarks" id="price"/>
-          </div>
-          <!-- 2nd button to suggest activity based on user inputs -->
-          <div class="buttonField">
-            <button type="button" id="generate">Generate</button>
-            <button type="button" id="random">Randomize</button>
-          </div>
-        </form>
-      </section>
-      <section>
-        <div class="activityDisplay" id="displayActivity">
-          <p id="heart"></p>
-          <p id="activityP"></p>
-          <p id="heart"></p>
         </div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+
+
+        <!-- Price Range dropdown for selection -->
+        <div class="dolladollabills">
+          <p>Price (0 being free and 100% being as expensive as can be):</p>
+          <input type="range" min="0" max="1" step="0.1" list="tickmarks" id="price" />
+        </div>
+        <!-- 2nd button to suggest activity based on user inputs -->
+        <div class="buttonField">
+          <button type="button" id="generate">Generate</button>
+          <button type="button" id="random">Randomize</button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <div class="activityDisplay" id="displayActivity">
+        <p id="heart"></p>
+        <p id="activityP"></p>
+        <p id="heart"></p>
+      </div>
+    </section>
+    <section>
+      <div class="weatherD">
+
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

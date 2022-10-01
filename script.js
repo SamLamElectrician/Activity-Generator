@@ -9,13 +9,13 @@ boredApp.displayActivityDiv = document.getElementById("displayActivity")
 
 //event listener for buttons
 //both lead to display() to display
-boredApp.generateButton.addEventListener('click', (e) =>{
+boredApp.generateButton.addEventListener('click', (e) => {
     e.preventDefault()
     boredApp.getUserData()
-    
+
 })
 
-boredApp.randomButton.addEventListener("click", (e) =>{
+boredApp.randomButton.addEventListener("click", (e) => {
     e.preventDefault()
     boredApp.random()
 })
@@ -30,18 +30,18 @@ boredApp.random = () => {
             const activity = jsonResponse.activity
             console.log(jsonResponse)
             boredApp.display(activity)
-            
+
         })
 }
 
 //drycode to present items
-boredApp.display = (activity) =>{
+boredApp.display = (activity) => {
     const p = document.getElementById('activityP')
     p.innerHTML = `&#128150; &#128150; &#128150; ${activity} together  &#128150; &#128150; &#128150;`
 }
 
 //error code for unmatched params
-boredApp.tryAgain = (activity) =>{
+boredApp.tryAgain = (activity) => {
     const p = document.getElementById('activityP')
     p.innerHTML = ` &#128150; &#128150; &#128150; Try again &#128150; &#128150; &#128150;`
 }
@@ -49,10 +49,10 @@ boredApp.tryAgain = (activity) =>{
 
 //search generator for generate button
 boredApp.getUserData = () => {
-    const activityVal= document.getElementById('people').value
+    const activityVal = document.getElementById('people').value
     const maxPrice = document.getElementById("price").value
     const url = new URL(boredApp.url)
-   //defines search params
+    //defines search params
     url.search = new URLSearchParams({
         "type": activityVal, //type refers to style of activity 
         "minprice": 0,
@@ -68,18 +68,18 @@ boredApp.getUserData = () => {
         .then((jsonResponse) => {
             const genActivity = jsonResponse.activity
             //if statement incase you get an undefined activity aka params dont match
-            if (genActivity === undefined){
+            if (genActivity === undefined) {
                 boredApp.tryAgain()
-            }else {
+            } else {
                 boredApp.display(genActivity)
             }
-        
+
         })
 }
 
 boredApp.init = () => {
 }
-  //do we need init for event listeners??
+//do we need init for event listeners??
 
 boredApp.init()
 
@@ -122,25 +122,16 @@ fetch(url)
 weatherApp.displayWeather = (weather) => {
     const p = document.createElement('p');
     const weatherDisplay = document.querySelector('.weatherDisaply');
-    // p.innerText(${weather.mainTemp})
+    p.innerText(`${weather.mainTemp}`)
 
-    // weatherDisplay.appendChild(p.innerText(${Math.round(weather.mainTemp)}))
+    weatherDisplay.appendChild(p.innerText(`${Math.round(weather.mainTemp)}`));
 }
 
 
 
 
-// weatherApp = {}
 
-// weatherApp.url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apikey}`
-// weatherApp.apikey = "dbc0821b5bd7f5f1698ab2fdcd1e5893";
 
-// weatherApp.getLocation = () => {
-//     const url = new Url(weatherApp.url)
-//     const url.search = new Search URLSearchParams({
-//         q
-//     })
-// }
 
 //STRETCH GOAL API
 // DISPLAY WEATHER IN TORONTO
