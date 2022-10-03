@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @font-face {
     font-family: "Open Sans";
     src: url(../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
@@ -28,4 +30,8 @@
     font-family: "Roboto";
     src: url(../fonts/Roboto-Bold.ttf);
     font-weight: bold;
+}
+
+h1 {
+    font-family: $primaryFont;
 }
