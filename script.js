@@ -130,7 +130,7 @@ weatherApp.displayWeather = (weather) => {
     img.classList.add("icon")
     const h3 = document.createElement('h3')
     h3.innerText = (`${weather.cloudData}`)
-    
+
     weatherDisplay.appendChild(img)
     weatherDisplay.appendChild(h2);
     weatherDisplay.appendChild(h3);
