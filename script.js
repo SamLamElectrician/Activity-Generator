@@ -129,12 +129,15 @@ weatherApp.fetchData = (url) =>
             }
         })
         .then((jsonResponse) => {
+
             const weatherData = {
                 mainTemp: (jsonResponse.main.temp),
                 feelsLike: (jsonResponse.main.feels_like),
                 windSpeed: (jsonResponse.wind.speed),
                 cloudData: (jsonResponse.weather[0].main),
-                icon: (jsonResponse.weather[0].icon)
+                icon: (jsonResponse.weather[0].icon),
+                place: (jsonResponse.name)
+
             }
             weatherApp.displayWeather(weatherData)
         })
@@ -144,10 +147,11 @@ weatherApp.fetchData = (url) =>
 
 weatherApp.displayWeather = (weather) => {
     const weatherDisplay = document.querySelector('.weatherDisplay');
-    const cityName = document.querySelector('.cityName');
+    const city = document.querySelector('.city');
     const sky = document.querySelector('.sky');
     const temp = document.querySelector('.temp');
 
+    city.innerText = (`${weather.place}`);
     temp.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
     sky.innerText = (`${weather.cloudData}`);
 
