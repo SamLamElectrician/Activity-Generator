@@ -113,6 +113,7 @@ weatherApp.form.addEventListener('submit', function (e) {
     e.preventDefault();
     const city = document.getElementById("city").value;
     weatherApp.searchCity(city);
+    console.log(city)
 
 })
 
@@ -123,7 +124,9 @@ weatherApp.fetchData = (url) =>
             if (response.ok) {
                 return response.json();
             }
-            throw new Error('Something went wrong');
+            else {
+                throw new Error('Something went wrong');
+            }
         })
         .then((jsonResponse) => {
             const weatherData = {
@@ -148,17 +151,16 @@ weatherApp.displayWeather = (weather) => {
     temp.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
     sky.innerText = (`${weather.cloudData}`);
 
-    weatherDisplay.innerHTML = '';
+
     // h2.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
-    const img = document.createElement('img')
+    const img = document.querySelector('.iconImage')
     img.src = (`http://openweathermap.org/img/wn/${weather.icon}.png`)
     img.classList.add("icon")
     // const h3 = document.createElement('h3')
     // h3.innerText = (`${weather.cloudData}`)
 
     weatherDisplay.appendChild(img)
-    weatherDisplay.appendChild(h2);
-    weatherDisplay.appendChild(h3);
+
 }
 
 weatherApp.wrongCity = () => {
