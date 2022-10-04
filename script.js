@@ -119,8 +119,11 @@ weatherApp.form.addEventListener('submit', function (e) {
 
 weatherApp.fetchData = (url) =>
     fetch(url)
-        .then((res) => {
-            return res.json();
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error('Something went wrong');
         })
         .then((jsonResponse) => {
             const weatherData = {
@@ -131,24 +134,36 @@ weatherApp.fetchData = (url) =>
                 icon: (jsonResponse.weather[0].icon)
             }
             weatherApp.displayWeather(weatherData)
-
         })
+        .catch(weatherApp.wrongCity)
 
 
 
 weatherApp.displayWeather = (weather) => {
-    const h2 = document.createElement('h2');
     const weatherDisplay = document.querySelector('.weatherDisplay');
-    h2.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
+    const cityName = document.querySelector('.cityName');
+    const sky = document.querySelector('.sky');
+    const temp = document.querySelector('.temp');
+
+    temp.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
+    sky.innerText = (`${weather.cloudData}`);
+
+    weatherDisplay.innerHTML = '';
+    // h2.innerText = (`${Math.round(weather.feelsLike)} \u2103 `)
     const img = document.createElement('img')
     img.src = (`http://openweathermap.org/img/wn/${weather.icon}.png`)
     img.classList.add("icon")
-    const h3 = document.createElement('h3')
-    h3.innerText = (`${weather.cloudData}`)
+    // const h3 = document.createElement('h3')
+    // h3.innerText = (`${weather.cloudData}`)
 
     weatherDisplay.appendChild(img)
     weatherDisplay.appendChild(h2);
     weatherDisplay.appendChild(h3);
+}
+
+weatherApp.wrongCity = () => {
+    document.getElementById("city").value = '';
+    alert('Wrong City');
 }
 
 
