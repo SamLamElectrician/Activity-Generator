@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+body {
+    background-color: $primaryColor;
+}
+
+header {
+    background: rgb(162, 210, 255);
+    background: linear-gradient(0deg, rgba(162, 210, 255, 1) 0%, rgba(210, 249, 241, 1) 100%);
+    padding: 0.3%;
+    text-align: center;
+}
