@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- testing sam bvkad j-->
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,13 +17,15 @@
   </header>
   <main>
     <section class="weather">
-      <!-- <div class="weatherBox">
-        <input type="text" id="city" name="city" placeholder="City">
-      </div> -->
-      
-        <div class="weatherDisplay">
-          <h2>Toronto</h2>
-        </div>
+      <form class="weatherBox">
+        <label for="city" name="city" class="sr-only">Type in the city</label>
+        <input type="text" id="city" name="city" placeholder="Type City">
+        <button>Check city</button>
+      </form>
+
+      <div class="weatherDisplay">
+        <!-- <h2>Toronto</h2> -->
+      </div>
 
       <!-- Whats the weather like today! -->
       <!-- STRETCH GOALS Displays weather information for current location  -->
@@ -69,7 +72,7 @@
         <p id="heart"></p>
       </div>
     </section>
-    
+
   </main>
   <script src="script.js"></script>
 </body>

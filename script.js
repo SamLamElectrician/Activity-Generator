@@ -92,33 +92,48 @@ boredApp.init()
 const weatherApp = {}
 
 
+
+weatherApp.form = document.querySelector('form');
 weatherApp.url = "https://api.openweathermap.org/data/2.5/weather"
 weatherApp.apiKey = "46b73165b95ad3c8b3d3ecd596052a25"
 
 const url = new URL(weatherApp.url)
-url.search = new URLSearchParams({
-    "q": "toronto",
-    "appid": weatherApp.apiKey,
-    "units": "metric"
+
+weatherApp.searchCity = (cityName) => {
+
+    url.search = new URLSearchParams({
+        "q": cityName,
+        "appid": weatherApp.apiKey,
+        "units": "metric"
+    })
+    weatherApp.fetchData(url);
+}
+
+weatherApp.form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const city = document.getElementById("city").value;
+    weatherApp.searchCity(city);
+
 })
 
-// weatherApp.fetchData = () => 
-fetch(url)
-    .then((res) => {
-        return res.json();
-    })
-    .then((jsonResponse) => {
-        console.log(jsonResponse.weather[0].icon)
-        const weatherData = {
-            mainTemp: (jsonResponse.main.temp),
-            feelsLike: (jsonResponse.main.feels_like),
-            windSpeed: (jsonResponse.wind.speed),
-            cloudData: (jsonResponse.weather[0].main),
-            icon: (jsonResponse.weather[0].icon)
-        }
-        weatherApp.displayWeather(weatherData)
 
-    })
+weatherApp.fetchData = (url) =>
+    fetch(url)
+        .then((res) => {
+            return res.json();
+        })
+        .then((jsonResponse) => {
+            const weatherData = {
+                mainTemp: (jsonResponse.main.temp),
+                feelsLike: (jsonResponse.main.feels_like),
+                windSpeed: (jsonResponse.wind.speed),
+                cloudData: (jsonResponse.weather[0].main),
+                icon: (jsonResponse.weather[0].icon)
+            }
+            weatherApp.displayWeather(weatherData)
+
+        })
+
 
 
 weatherApp.displayWeather = (weather) => {
