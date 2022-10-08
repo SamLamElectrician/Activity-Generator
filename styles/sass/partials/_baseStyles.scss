@@ -1,5 +1,14 @@
 @use "variables" as *;
 
+html {
+    font-size: 125%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: $primaryColor;
 }
@@ -9,4 +18,34 @@ header {
     background: linear-gradient(0deg, rgba(162, 210, 255, 1) 0%, rgba(210, 249, 241, 1) 100%);
     padding: 0.3%;
     text-align: center;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    border: 5px solid $tertiaryColor;
+    padding: 15px;
+    background-color: $secondaryColor;
+    transition: 0.3s;
+    text-transform: uppercase;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    &:focus {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+input[type=select] {
+    appearance: none;
+    color: $tertiaryColor;
 }

@@ -258,6 +258,15 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 125%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #BDE0FE;
 }
@@ -270,47 +279,41 @@ header {
   text-align: center;
 }
 
-.weather {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
 }
-.weather .weatherDisplay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 4%;
-  margin: 3% 0% 3% 0%;
-  background-color: white;
-  border-radius: 15%;
-  -webkit-box-shadow: 5px 10px slategray;
-          box-shadow: 5px 10px slategray;
+
+button {
+  border: 5px solid #FFAFCC;
+  padding: 15px;
+  background-color: #A2D2FF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   text-transform: uppercase;
 }
-.weather .weatherDisplay .icon {
-  width: 4rem;
-  width: 100%;
+button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+button:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+input[type=select] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #FFAFCC;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
-  font-style: italic;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../.././../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
-  font-style: normal;
+  font-family: "Nunito";
+  src: url(../fonts/Nunito-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "Roboto";
@@ -334,11 +337,11 @@ h1 {
 }
 
 p {
-  font-family: "Open Sans";
+  font-family: "Nunito";
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "Nunito";
 }
 
 .popUp {
@@ -406,4 +409,40 @@ body {
 .popUp ul li {
   margin-bottom: 14px;
   list-style: none;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.weather .weatherDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 4%;
+  margin: 3% 0% 3% 0%;
+  background-color: white;
+  border-radius: 15%;
+  -webkit-box-shadow: 5px 10px slategray;
+          box-shadow: 5px 10px slategray;
+  text-transform: uppercase;
+  min-width: 30%;
+}
+.weather .weatherDisplay .icon {
+  padding: 5%;
 }
