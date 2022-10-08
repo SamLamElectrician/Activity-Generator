@@ -340,3 +340,70 @@ p {
 body {
   font-family: "Open Sans";
 }
+
+.popUp {
+  display: none;
+}
+.popUp .popUpInner {
+  background-color: #fff;
+  min-width: 450px;
+  height: 52vh;
+  padding: 30px 40px;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  z-index: 9;
+  overflow: auto;
+  -webkit-box-shadow: 0px 25px 43px 0px rgba(0, 0, 0, 0.32);
+          box-shadow: 0px 25px 43px 0px rgba(0, 0, 0, 0.32);
+  max-width: 100%;
+}
+.popUp h3 {
+  text-align: center;
+}
+.popUp p {
+  text-align: center;
+}
+.popUp:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.57);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 8;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.popUp button {
+  display: block;
+  margin: 0 0 5px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #c5c5c5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.popUp ul {
+  font-size: 15px;
+  text-align: left;
+  margin: 20px 0;
+  line-height: 1.3;
+  list-style-type: disc;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 0;
+}
+.popUp ul li {
+  margin-bottom: 14px;
+  list-style: none;
+}
