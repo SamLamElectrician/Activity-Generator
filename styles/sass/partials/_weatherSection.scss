@@ -5,6 +5,9 @@
     flex-direction: column;
     align-items: center;
     border: 5px solid $fourthColor;
+    width: 50%;
+    margin-top: 30px;
+    flex-basis: 35%;
 
     .weatherBox {
         display: flex;
@@ -14,7 +17,7 @@
     .weatherDisplay {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 4%;
         margin: 3% 0% 3% 0%;
         background-color: $secondaryColor;

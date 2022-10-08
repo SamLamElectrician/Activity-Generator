@@ -1,5 +1,8 @@
+@use "variables" as *;
+
 .popUp {
   display: none;
+
   .popUpInner {
     background-color: #fff;
     min-width: 450px;
@@ -10,18 +13,21 @@
     left: 50%;
     top: 50%;
     border-radius: 8px;
-    font-family: "Poppins", sans-serif;
-    z-index: 9;
+    font-family: $secondaryFont;
+    z-index: 10;
     overflow: auto;
     box-shadow: 0px 25px 43px 0px rgb(0 0 0 / 32%);
     max-width: 100%;
   }
+
   h3 {
     text-align: center;
   }
+
   p {
     text-align: center;
   }
+
   &:before {
     content: "";
     background: rgb(0 0 0 / 57%);
@@ -36,6 +42,7 @@
     z-index: 8;
     backdrop-filter: blur(10px);
   }
+
   button {
     display: block;
     margin: 0 0 5px auto;
@@ -46,6 +53,7 @@
     outline: none;
     cursor: pointer;
   }
+
   ul {
     font-size: 15px;
     text-align: left;
@@ -54,6 +62,7 @@
     list-style-type: disc;
     padding-inline-start: 0;
     margin: 0;
+
     li {
       margin-bottom: 14px;
       list-style: none;

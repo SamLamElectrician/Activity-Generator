@@ -1,4 +1,6 @@
-.activityDisplay {
-    text-align: center;
-    font-size: 3rem;
+@use "variables" as *;
+
+main {
+    display: flex;
+    flex-direction: row;
 }
