@@ -45,7 +45,9 @@ button {
 
 }
 
-input[type=select] {
-    appearance: none;
-    color: $tertiaryColor;
+input[type="text"] {
+    margin: 5px 5px;
+    padding: 2%;
+    border: none;
+    border-radius: 5%;
 }
