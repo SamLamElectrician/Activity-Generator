@@ -72,7 +72,7 @@ boredApp.getUserData = () => {
     });
 };
 
-boredApp.init = () => {};
+boredApp.init = () => { };
 //do we need init for event listeners??
 
 boredApp.init();
@@ -160,6 +160,7 @@ window.addEventListener("load", function () {
     document.querySelector(".popUp").style.display = "block";
   }, 1000);
 });
+
 document.querySelector("#closePop").addEventListener("click", function () {
   document.querySelector(".popUp").style.display = "none";
 });
