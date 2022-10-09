@@ -165,6 +165,9 @@ document.querySelector("#closePop").addEventListener("click", function () {
   document.querySelector(".popUp").style.display = "none";
 });
 
+document.querySelector("#info").addEventListener("click", function () {
+  document.querySelector(".popUp").style.display = "block";
+});
 //STRETCH GOAL API
 // DISPLAY WEATHER IN TORONTO
 // DISPLAY WEATHER INFORMATION FOR THE CURRENT DAY (MAYBE THE USER WOULD LIKE TO RETHINK THEIR DATE IF IT'S RAINING)

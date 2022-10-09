@@ -52,6 +52,7 @@ input[type="text"] {
     border: none;
     border-radius: 5%;
     margin-bottom: 15px;
+    font-family: $secondaryFont;
 
     &:focus {
         outline: none;

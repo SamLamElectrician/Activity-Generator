@@ -276,6 +276,14 @@ main {
 header {
   margin-bottom: 80px;
 }
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
 html {
   font-size: 125%;
@@ -329,6 +337,7 @@ input[type=text] {
   border: none;
   border-radius: 5%;
   margin-bottom: 15px;
+  font-family: "Nunito";
 }
 input[type=text]:focus {
   outline: none;
@@ -401,9 +410,11 @@ body {
 }
 .popUp h3 {
   text-align: center;
+  margin: 5px 0;
 }
 .popUp p {
   text-align: center;
+  margin: 2px 0;
 }
 .popUp:before {
   content: "";
@@ -555,6 +566,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 5px 10px #CDB4DB;
+          box-shadow: 5px 10px #CDB4DB;
 }
 
 footer {
