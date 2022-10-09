@@ -56,7 +56,6 @@ boredApp.getUserData = () => {
   });
 
   //uses search params to create endpoint to fetch data
-  console.log(url);
   fetch(url)
     .then((res) => {
       return res.json();
@@ -150,7 +149,7 @@ weatherApp.displayWeather = (weather) => {
 
 weatherApp.wrongCity = () => {
   document.getElementById("city").value = "";
-  alert("Wrong City");
+  alert("Could not find city try again");
 };
 
 //popup Modal
@@ -158,7 +157,7 @@ weatherApp.wrongCity = () => {
 window.addEventListener("load", function () {
   setTimeout(function open(event) {
     document.querySelector(".popUp").style.display = "block";
-  }, 1000);
+  });
 });
 
 document.querySelector("#closePop").addEventListener("click", function () {

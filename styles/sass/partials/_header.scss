@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 header {
     margin-bottom: 80px;
 
@@ -6,4 +8,12 @@ header {
         justify-content: center;
     }
 
+    @media (max-width:$tablet) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width:$mobile) {
+        font-size: 1rem;
+        flex-direction: column;
+    }
 }

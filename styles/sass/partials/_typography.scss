@@ -40,3 +40,13 @@ body {
     font-family: $secondaryFont;
     color: $textColor;
 }
+
+a {
+    list-style: none;
+    color: $textColor;
+    text-decoration: none;
+}
+
+li {
+    font-size: 0.9rem;
+}

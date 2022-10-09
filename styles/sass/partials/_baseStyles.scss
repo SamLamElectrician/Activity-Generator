@@ -4,10 +4,6 @@ html {
     font-size: 125%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: $primaryColor;
@@ -17,7 +13,7 @@ body {
 header {
     background: rgb(162, 210, 255);
     background: linear-gradient(0deg, rgba(162, 210, 255, 1) 0%, rgba(210, 249, 241, 1) 100%);
-    padding: 0.3%;
+    padding: 3%;
     text-align: center;
 }
 
@@ -33,6 +29,14 @@ button {
     background-color: $secondaryColor;
     transition: 0.3s;
     text-transform: uppercase;
+    font-family: $primaryFont;
+    font-style: italic;
+
+    @media (max-width:$tablet) {
+        font-size: 1rem;
+        padding: 5px;
+        align-self: center;
+    }
 
     &:hover {
         transform: scale(1.05);
@@ -46,6 +50,8 @@ button {
 
 }
 
+
+
 input[type="text"] {
     margin: 5px 5px;
     padding: 5%;
@@ -53,6 +59,12 @@ input[type="text"] {
     border-radius: 5%;
     margin-bottom: 15px;
     font-family: $secondaryFont;
+
+    @media (max-width:$tablet) {
+        padding: 1%;
+        width: 75%;
+        margin: 10px auto;
+    }
 
     &:focus {
         outline: none;
