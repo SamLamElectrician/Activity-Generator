@@ -5,6 +5,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
 
     @media (max-width:$tablet) {
         flex-direction: column;
