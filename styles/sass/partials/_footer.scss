@@ -1,9 +1,9 @@
 @use "variables" as *;
 
 footer {
+    width: 100%;
     background-color: $secondaryColor;
-    position: fixed;
-    bottom: 0;
     text-align: center;
     padding: 2% 0;
+    margin-top: 20px;
 }

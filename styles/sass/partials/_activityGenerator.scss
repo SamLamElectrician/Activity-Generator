@@ -4,18 +4,35 @@
     font-size: 1.2rem;
     flex-basis: 45%;
     border: 5px solid $fourthColor;
+    border-radius: 10% 10% 0 0;
     padding: 5% 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
     }
 
 
     label {
         display: block;
         margin: 10px 0;
+        text-align: center;
+    }
+
+    .activityDisplay {
+        width: 90%;
+        background-color: $secondaryColor;
+        min-height: 200px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        padding: 3%;
+        align-items: center;
+        justify-content: center;
     }
 }

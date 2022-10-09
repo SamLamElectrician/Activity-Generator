@@ -6,9 +6,11 @@
     align-items: center;
     border: 5px solid $fourthColor;
     width: 50%;
-
+    min-height: 566px;
     flex-basis: 45%;
     padding: 5% 0;
+    border-radius: 10% 10% 0 0;
+    justify-content: space-around;
 
     .weatherBox {
         display: flex;
@@ -29,6 +31,11 @@
 
         .icon {
             padding: 5%;
+        }
+
+        p {
+            font-style: italic;
+            margin: 10px 5px;
         }
 
     }

@@ -48,9 +48,16 @@ button {
 
 input[type="text"] {
     margin: 5px 5px;
-    padding: 2%;
+    padding: 5%;
     border: none;
     border-radius: 5%;
+    margin-bottom: 15px;
+
+    &:focus {
+        outline: none;
+        border: 2px solid $fourthColor;
+    }
+
 }
 
 input[type="range"] {

@@ -34,13 +34,13 @@ boredApp.random = () => {
 //drycode to present items
 boredApp.display = (activity) => {
   const p = document.getElementById("activityP");
-  p.innerHTML = `&#128150; &#128150; &#128150; ${activity} together  &#128150; &#128150; &#128150;`;
+  p.innerHTML = ` &#128150; ${activity} together  &#128150; `;
 };
 
 //error code for unmatched params
 boredApp.tryAgain = (activity) => {
   const p = document.getElementById("activityP");
-  p.innerHTML = ` &#128150; &#128150; &#128150; Try again &#128150; &#128150; &#128150;`;
+  p.innerHTML = ` &#128150; Try again &#128150; `;
 };
 
 //search generator for generate button
