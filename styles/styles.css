@@ -331,7 +331,7 @@ header {
 }
 
 button {
-  border: 5px solid #FFAFCC;
+  border: 2px solid #FFAFCC;
   padding: 10px;
   background-color: #A2D2FF;
   -webkit-transition: 0.3s;
