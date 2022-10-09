@@ -314,7 +314,7 @@ header {
 
 button {
   border: 5px solid #FFAFCC;
-  padding: 3px;
+  padding: 10px;
   background-color: #A2D2FF;
   -webkit-transition: 0.3s;
   transition: 0.3s;
