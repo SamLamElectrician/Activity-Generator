@@ -300,7 +300,7 @@ header .wrapper {
 }
 @media (max-width: 480px) {
   header {
-    font-size: 1rem;
+    font-size: 0.7rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -453,6 +453,11 @@ li {
           box-shadow: 0px 25px 43px 0px rgba(0, 0, 0, 0.32);
   max-width: 100%;
 }
+@media (max-width: 480px) {
+  .popUp .popUpInner {
+    max-width: 80%;
+  }
+}
 .popUp h3 {
   text-align: center;
   margin-bottom: 30px 0;
@@ -525,6 +530,11 @@ li {
 @media (max-width: 768px) {
   .weather {
     min-height: none;
+  }
+}
+@media (max-width: 480px) {
+  .weather {
+    width: 80%;
   }
 }
 .weather .weatherBox {
@@ -654,6 +664,4 @@ footer {
   text-align: center;
   padding: 2% 0;
   margin-top: 20px;
-  position: absolute;
-  bottom: 0;
 }

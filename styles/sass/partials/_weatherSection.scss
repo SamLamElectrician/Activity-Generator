@@ -20,6 +20,10 @@
         min-height: none;
     }
 
+    @media (max-width:$mobile) {
+        width: 80%;
+    }
+
     .weatherBox {
         display: flex;
         flex-direction: column;
