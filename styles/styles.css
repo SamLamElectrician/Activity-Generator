@@ -1,35 +1,3 @@
-.weather {
-  text-align: center;
-}
-
-.weatherBox {
-  padding: 4% 2% 4% 2%;
-  margin: 0 auto;
-}
-
-form {
-  text-align: center;
-}
-
-.tophalf {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row nowrap;
-          flex-direction: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 4%;
-}
-
-.activityDisplay {
-  text-align: center;
-  font-size: 3rem;
-}
-
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -40,7 +8,12 @@ body {
   margin: 0;
 }
 
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
@@ -49,7 +22,9 @@ h1 {
   margin: 0.67em 0;
 }
 
-figcaption, figure, main {
+figcaption,
+figure,
+main {
   display: block;
 }
 
@@ -81,15 +56,19 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: inherit;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
 
-code, kbd, samp {
+code,
+kbd,
+samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -107,7 +86,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -122,7 +102,8 @@ sup {
   top: -0.5em;
 }
 
-audio, video {
+audio,
+video {
   display: inline-block;
 }
 
@@ -139,31 +120,46 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, html [type=button], [type=reset], [type=submit] {
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -190,13 +186,15 @@ textarea {
   overflow: auto;
 }
 
-[type=checkbox], [type=radio] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -205,7 +203,8 @@ textarea {
   outline-offset: -2px;
 }
 
-[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -214,7 +213,8 @@ textarea {
   font: inherit;
 }
 
-details, menu {
+details,
+menu {
   display: block;
 }
 
@@ -239,7 +239,9 @@ html {
           box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -258,6 +260,58 @@ html {
   overflow: hidden;
 }
 
+main {
+  background-color: #BDE0FE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header {
+  margin-bottom: 80px;
+}
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 768px) {
+  header {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    font-size: 0.7rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html {
+  font-size: 125%;
+}
+
 body {
   background-color: #BDE0FE;
 }
@@ -266,51 +320,76 @@ header {
   background: rgb(162, 210, 255);
   background: -webkit-gradient(linear, left bottom, left top, from(rgb(162, 210, 255)), to(rgb(210, 249, 241)));
   background: linear-gradient(0deg, rgb(162, 210, 255) 0%, rgb(210, 249, 241) 100%);
-  padding: 0.3%;
+  padding: 3%;
   text-align: center;
 }
 
-.weather {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
 }
-.weather .weatherDisplay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 4%;
-  margin: 3% 0% 3% 0%;
-  background-color: white;
-  border-radius: 15%;
-  -webkit-box-shadow: 5px 10px slategray;
-          box-shadow: 5px 10px slategray;
+
+button {
+  border: 2px solid #FFAFCC;
+  padding: 10px;
+  background-color: #A2D2FF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   text-transform: uppercase;
+  font-family: "Roboto";
+  font-style: italic;
 }
-.weather .weatherDisplay .icon {
-  width: 4rem;
-  width: 100%;
+@media (max-width: 768px) {
+  button {
+    font-size: 1rem;
+    padding: 5px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+button:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+input[type=text] {
+  margin: 5px 5px;
+  padding: 5%;
+  border: none;
+  border-radius: 5%;
+  margin-bottom: 15px;
+  font-family: "Nunito";
+}
+@media (max-width: 768px) {
+  input[type=text] {
+    padding: 1%;
+    width: 75%;
+    margin: 10px auto;
+  }
+}
+input[type=text]:focus {
+  outline: none;
+  border: 2px solid #FFC8DD;
+}
+
+input[type=range] {
+  padding: 5px 0;
+}
+input[type=range]::before {
+  content: attr(min);
+  font-size: 20px;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
-  font-style: italic;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../.././../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
-  font-style: normal;
+  font-family: "Nunito";
+  src: url(../fonts/Nunito-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "Roboto";
@@ -334,20 +413,32 @@ h1 {
 }
 
 p {
-  font-family: "Open Sans";
+  font-family: "Nunito";
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "Nunito";
+  color: #3e3b43;
+}
+
+a {
+  list-style: none;
+  color: #3e3b43;
+  text-decoration: none;
+}
+
+li {
+  font-size: 0.9rem;
 }
 
 .popUp {
   display: none;
 }
 .popUp .popUpInner {
-  background-color: #fff;
+  background-color: #A2D2FF;
+  line-height: 1.2rem;
   min-width: 450px;
-  height: 52vh;
+  height: 90%;
   padding: 30px 40px;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
@@ -355,15 +446,25 @@ body {
   left: 50%;
   top: 50%;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  z-index: 9;
+  font-family: "Nunito";
+  z-index: 10;
   overflow: auto;
   -webkit-box-shadow: 0px 25px 43px 0px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 25px 43px 0px rgba(0, 0, 0, 0.32);
   max-width: 100%;
 }
+@media (max-width: 480px) {
+  .popUp .popUpInner {
+    max-width: 80%;
+    height: 100vh;
+  }
+}
+.popUp .popUpInner button {
+  font-size: 2rem;
+}
 .popUp h3 {
   text-align: center;
+  margin-bottom: 30px 0;
 }
 .popUp p {
   text-align: center;
@@ -373,7 +474,7 @@ body {
   background: rgba(0, 0, 0, 0.57);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 200%;
   left: 0;
   right: 0;
   margin: auto;
@@ -388,22 +489,180 @@ body {
   margin: 0 0 5px auto;
   background-color: transparent;
   font-size: 30px;
-  color: #c5c5c5;
+  color: #3e3b43;
   border: none;
   outline: none;
   cursor: pointer;
 }
 .popUp ul {
-  font-size: 15px;
   text-align: left;
   margin: 20px 0;
   line-height: 1.3;
-  list-style-type: disc;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
   margin: 0;
 }
 .popUp ul li {
-  margin-bottom: 14px;
-  list-style: none;
+  margin: 14px;
+  list-style: inside;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 5px solid #FFC8DD;
+  width: 50%;
+  min-height: 597.6px;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 5% 0;
+  border-radius: 10% 10% 0 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media (max-width: 1024px) {
+  .weather {
+    min-height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .weather {
+    min-height: none;
+    width: 80%;
+  }
+}
+.weather .weatherBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.weather .weatherDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4%;
+  margin: 3% 0% 3% 0%;
+  background-color: #A2D2FF;
+  border-radius: 15%;
+  -webkit-box-shadow: 5px 10px #CDB4DB;
+          box-shadow: 5px 10px #CDB4DB;
+  text-transform: uppercase;
+  min-width: 30%;
+}
+.weather .weatherDisplay .icon {
+  padding: 5%;
+}
+.weather .weatherDisplay p {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 10px 5px;
+}
+
+.activityGenerator {
+  font-size: 1.2rem;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  border: 5px solid #FFC8DD;
+  border-radius: 10% 10% 0 0;
+  padding: 5% 0;
+  min-height: 597px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1024px) {
+  .activityGenerator {
+    min-height: 500px;
+    padding: 0;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .activityGenerator {
+    padding: 5% 5%;
+    margin-top: 30px;
+  }
+}
+.activityGenerator form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.activityGenerator label {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .activityGenerator .buttonField {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.activityGenerator button {
+  margin: 5px 0;
+}
+.activityGenerator .activityDisplay {
+  width: 90%;
+  background-color: #A2D2FF;
+  min-height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 5px 10px #CDB4DB;
+          box-shadow: 5px 10px #CDB4DB;
+}
+
+footer {
+  width: 100%;
+  background-color: #A2D2FF;
+  text-align: center;
+  padding: 2% 0;
+  margin-top: 20px;
 }

@@ -1,116 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- testing sam bvkad j-->
+<!-- testing sam bvkad j-->
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Project 2</title>
-  </head>
-  <!-- TESTING PHIL -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>Date Generator</title>
+</head>
 
-  <body>
-    <header>
-      <h1 class="headerTitle">Sam and Phil's Date Generator</h1>
-    </header>
-    <main>
-      <section class="weather">
-        <form class="weatherBox">
-          <label for="city" name="city" class="sr-only">Type in the city</label>
-          <input type="text" id="city" name="city" placeholder="Type City" />
-          <button>Check city</button>
-        </form>
 
-        <div class="weatherDisplay">
-          <p class="city"></p>
-          <img src="" alt="" class="iconImage" />
-          <p class="temp"></p>
-          <p class="sky"></p>
-        </div>
-
-        <!-- Whats the weather like today! -->
-        <!-- STRETCH GOALS Displays weather information for current location  -->
-      </section>
-      <section class="selectors">
-        <form>
-          <!-- "How many people" dropdown menu -->
-          <div class="tophalf">
-            <div class="activity">
-              <label for="activitytype">What type of activity</label>
-              <select name="people" id="people">
-                <option value="">No Preference</option>
-                <option value="education">Education</option>
-                <option value="recreational">Recreational</option>
-                <option value="social">Social</option>
-                <option value="diy">DIY</option>
-                <option value="charity">Charity</option>
-                <option value="cooking">Cooking</option>
-                <option value="relaxation">Relaxation</option>
-                <option value="music">Music</option>
-                <option value="busy Work">Busy Work</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Price Range dropdown for selection -->
-          <div class="dolladollabills">
-            <p>Price (0 being free and 100% being as expensive as can be):</p>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              list="tickmarks"
-              id="price"
-            />
-          </div>
-          <!-- 2nd button to suggest activity based on user inputs -->
-          <div class="buttonField">
-            <button type="button" id="generate">Generate</button>
-            <button type="button" id="random">Randomize</button>
-          </div>
-        </form>
-      </section>
-      <section>
-        <div class="activityDisplay" id="displayActivity">
-          <p id="heart"></p>
-          <p id="activityP"></p>
-          <p id="heart"></p>
-        </div>
-      </section>
-      <div class="popUp">
-        <div class="popUpInner">
-          <button id="closePop">&times;</button>
-          <h3>&#128150 &#128150Welcome to Sam and Phil's Date Generator &#128150 &#128150</h3>
-          <p>
-            We wanted a way for those couples to figure out a plan instead of
-            just netflix and chilling. We wanted a lil spice in your life so we
-            created a Date Generator with an weather display for your needs
-          </p>
-          <ol>
-            <li>
-              Type in where you are based in the city input to get the current
-              weather of the day
-            </li>
-            <li>
-              Select the type of activity you would like to partake in, in our
-              drop down menu
-            </li>
-            <li>
-              Select on the slider how expensive you would like the activity to
-              be
-            </li>
-            <li>Click generate and go on your date</li>
-          </ol>
-          <p>
-            BONUS BONUS BONUS: Click Random if you don't have a preference for
-            price or type
-          </p>
-        </div>
+<body>
+  <header>
+    <div class="wrapper">
+      <button id="info">info</button>
+      <h1 class="headerTitle wrapper">Sam and Phil's Date Generator</h1>
+    </div>
+  </header>
+  <!-- header ends -->
+  <main class="wrapper">
+    <section class="weather">
+      <form class="weatherBox">
+        <label for="city" name="city" class="sr-only">Type in the city</label>
+        <input type="text" id="city" name="city" placeholder="Type City" />
+        <button>Check city</button>
+      </form>
+      <!-- form weather ends -->
+      <div class="weatherDisplay">
+        <p class="city"> --- </p>
+        <img src="" alt="" class="iconImage" />
+        <p class="temp"> -- </p>
+        <p class="sky"> --- </p>
       </div>
-    </main>
-    <script src="script.js"></script>
-  </body>
+      <!-- weather display ends -->
+    </section>
+    <!-- weather section ends -->
+    <section class="activityGenerator">
+      <form>
+        <div class="activity">
+          <label for="people" name="people">What type of activity</label>
+          <select name="people" id="people">
+            <option value="">No Preference</option>
+            <option value="education">Education</option>
+            <option value="recreational">Recreational</option>
+            <option value="social">Social</option>
+            <option value="diy">DIY</option>
+            <option value="charity">Charity</option>
+            <option value="cooking">Cooking</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="music">Music</option>
+            <option value="busy Work">Busy Work</option>
+          </select>
+        </div>
+        <!-- Price Range dropdown for selection -->
+        <div class="priceRange">
+          <label for="price" name="price"> Price Range</label>
+
+          <input type="range" min="0" max="1" step="0.1" list="tickmarks" id="price" />
+        </div>
+        <!-- 2nd button to suggest activity based on user inputs -->
+        <div class="buttonField">
+          <button type="button" id="generate">Generate</button>
+          <button type="button" id="random">Randomize</button>
+        </div>
+        <!-- button field ends -->
+      </form>
+      <!-- form ends -->
+      <div class="activityDisplay" id="displayActivity">
+        <p id="heart"></p>
+        <p id="activityP"></p>
+        <p id="heart"></p>
+      </div>
+    </section>
+
+
+    <!-- activity display ends -->
+    <div class="popUp">
+      <div class="popUpInner">
+        <button id="closePop" alt="Close pop up">&times;</button>
+        <h3>&#128150Welcome to Sam and Phil's Date Generator &#128150</h3>
+        <p>
+          This app will suggest a date activity based on the parameters you enter.
+        </p>
+        <ul>
+          <li>
+            Type in where you are based in the city input to get the current
+            weather of the day
+          </li>
+          <li>
+            Select the type of activity you would like to partake in, in our
+            drop down menu
+          </li>
+          <li>
+            Select on the slider how expensive you would like the activity to
+            be
+          </li>
+          <li>Click generate for your suggestion</li>
+          <li>If you'd like to randomize all the parameters for a suprise just hit the Randomize button</li>
+        </ul>
+      </div>
+    </div>
+    <!-- pop up modal ends -->
+  </main>
+  <footer>
+    <p><a href="https://junocollege.com/">Made at Juno College</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

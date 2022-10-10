@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid $fourthColor;
+    width: 50%;
+    min-height: 597.6px;
+    flex-basis: 45%;
+    padding: 5% 0;
+    border-radius: 10% 10% 0 0;
+    justify-content: space-around;
+
+    @media (max-width:$smallScreens) {
+        min-height: 500px;
+    }
+
+    @media (max-width:$tablet) {
+        min-height: none;
+        width: 80%;
+    }
+
+    @media (max-width:$mobile) {}
+
+    .weatherBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .weatherDisplay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+        margin: 3% 0% 3% 0%;
+        background-color: $secondaryColor;
+        border-radius: 15%;
+        box-shadow: 5px 10px $fifthColor;
+        text-transform: uppercase;
+        min-width: 30%;
+
+        .icon {
+            padding: 5%;
+        }
+
+        p {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin: 10px 5px;
+        }
+
+    }
+}

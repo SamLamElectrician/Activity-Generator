@@ -1,24 +1,13 @@
-.weather {
-    text-align: center;
-}
+@use "variables" as *;
 
-.weatherBox {
-    padding: 4% 2% 4% 2%;
-    margin: 0 auto;
-}
-
-form {
-    text-align: center;
-}
-
-.tophalf {
+main {
+    background-color: $primaryColor;
     display: flex;
-    flex-direction: row nowrap;
-    justify-content: center;
-    gap: 4%;
-}
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
 
-.activityDisplay {
-    text-align: center;
-    font-size: 3rem;
+    @media (max-width:$tablet) {
+        flex-direction: column;
+    }
 }

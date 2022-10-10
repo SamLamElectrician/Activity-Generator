@@ -1,12 +1,83 @@
 @use "variables" as *;
 
+html {
+    font-size: 125%;
+}
+
+
 body {
     background-color: $primaryColor;
+
 }
 
 header {
     background: rgb(162, 210, 255);
     background: linear-gradient(0deg, rgba(162, 210, 255, 1) 0%, rgba(210, 249, 241, 1) 100%);
-    padding: 0.3%;
+    padding: 3%;
     text-align: center;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    border: 2px solid $tertiaryColor;
+    padding: 10px;
+    background-color: $secondaryColor;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-family: $primaryFont;
+    font-style: italic;
+
+    @media (max-width:$tablet) {
+        font-size: 1rem;
+        padding: 5px;
+        align-self: center;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    &:focus {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+
+
+input[type="text"] {
+    margin: 5px 5px;
+    padding: 5%;
+    border: none;
+    border-radius: 5%;
+    margin-bottom: 15px;
+    font-family: $secondaryFont;
+
+    @media (max-width:$tablet) {
+        padding: 1%;
+        width: 75%;
+        margin: 10px auto;
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid $fourthColor;
+    }
+
+}
+
+input[type="range"] {
+    padding: 5px 0;
+
+    &::before {
+        content: attr(min);
+        font-size: 20px;
+    }
 }

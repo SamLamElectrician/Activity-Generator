@@ -1,16 +1,11 @@
 @use "variables" as *;
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
-    font-style: italic;
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-VariableFont_wght.ttf)
 }
 
-@font-face {
-    font-family: "Open Sans";
-    src: url(../.././../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: "Roboto";
@@ -34,7 +29,9 @@
 
 h1 {
     font-family: $primaryFont;
+
 }
+
 
 p {
     font-family: $secondaryFont;
@@ -42,4 +39,15 @@ p {
 
 body {
     font-family: $secondaryFont;
+    color: $textColor;
+}
+
+a {
+    list-style: none;
+    color: $textColor;
+    text-decoration: none;
+}
+
+li {
+    font-size: 0.9rem;
 }
