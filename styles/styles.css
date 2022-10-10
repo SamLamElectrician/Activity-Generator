@@ -438,7 +438,7 @@ li {
   background-color: #A2D2FF;
   line-height: 1.2rem;
   min-width: 450px;
-  height: 52vh;
+  height: 90%;
   padding: 30px 40px;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
@@ -456,7 +456,11 @@ li {
 @media (max-width: 480px) {
   .popUp .popUpInner {
     max-width: 80%;
+    height: 100vh;
   }
+}
+.popUp .popUpInner button {
+  font-size: 2rem;
 }
 .popUp h3 {
   text-align: center;
