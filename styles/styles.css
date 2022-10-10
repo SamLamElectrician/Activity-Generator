@@ -530,10 +530,6 @@ li {
 @media (max-width: 768px) {
   .weather {
     min-height: none;
-  }
-}
-@media (max-width: 480px) {
-  .weather {
     width: 80%;
   }
 }

@@ -71,15 +71,6 @@ boredApp.getUserData = () => {
     });
 };
 
-boredApp.init = () => { };
-//do we need init for event listeners??
-
-boredApp.init();
-
-//button random completed
-//add generate params
-//add stylings
-//add weather last
 
 const weatherApp = {};
 
@@ -158,7 +149,7 @@ window.addEventListener("load", function () {
   setTimeout(function open(event) {
     document.querySelector(".popUp").style.display = "block";
   });
-});
+})
 
 document.querySelector("#closePop").addEventListener("click", function () {
   document.querySelector(".popUp").style.display = "none";

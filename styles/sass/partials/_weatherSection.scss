@@ -18,11 +18,10 @@
 
     @media (max-width:$tablet) {
         min-height: none;
-    }
-
-    @media (max-width:$mobile) {
         width: 80%;
     }
+
+    @media (max-width:$mobile) {}
 
     .weatherBox {
         display: flex;
